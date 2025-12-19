@@ -1,0 +1,19 @@
+{
+  "name": "biznesowa_kompania_serwerowa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "Emil Prajs",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-session": "^1.18.2",
+    "mongodb": "^7.0.0"
+  },
+  "description": "Stylowa strona robiona w idei o naszej paczce bo to pierwsze co mi przyszlo do glowy."
+}

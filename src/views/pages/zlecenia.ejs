@@ -1,0 +1,77 @@
+<%- include('../partials/head')%>
+<p class="komunikat">Strona uruchamiana przez MongoDB</p>
+<%- include('../partials/header') %>
+
+<body>
+    <main>
+        <div class="container">
+            <br/>
+            <div class="sekcja1">
+                <h1>Formularz zamawiania zlecen</h1>
+                <h3>Wpisz co chcesz bysmy ci zaprojektowali badz zbudowali</h3>
+            </div>
+            <table class="tablicaLewa">
+                <form action="/zlecenia" method="POST" id="zleceniaForm">
+                <tr>
+                    <th>
+                        <h1>Szczegoly</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Mamy ci zrobic szkic budowli zebys ty budowal czy chcesz tez sile robocza
+                            <select name="rodzaj" required style="width:100%; box-sizing:border-box;">
+                                <option value="projekt" <%= formData && formData.rodzaj==='projekt' ? 'selected' : '' %>>Projekt budowy</option>
+                                <option value="budowanie" <%= formData && formData.rodzaj==='budowanie' ? 'selected' : '' %>>Budowanie (czarna robota)</option>
+                            </select>
+                        </h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Jak chcesz nazwac swoja konstrukcje
+                            <input type="text" id="loginNazwa" name="nazwa" minlength="3" required
+                            value="<%= formData && formData.nazwa_projektu ? formData.nazwa_projektu : '' %>">
+                        </h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Napisz nam cos o twoim pomysle co to ogolnie jest i jak ma wygladac
+                            <textarea name="opis" rows="6" style="width:100%; box-sizing:border-box;"><%= formData && formData.opis ? formData.opis : '' %></textarea>
+                        </h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <button type="submit" style="background: none; border: none; cursor: pointer;"><h3>Wyslij zlecenie na nasza liste</h3></button>
+                        <% if (typeof loginError !== 'undefined' && loginError) { %>
+                            <div class="bladFormularza"><h4><%= loginError %></h4></div>
+                        <% } %>
+                    </th>
+                </tr>
+                </form>
+            </table>
+            <table class="tablicaPrawa">
+                <tr>
+                    <th>
+                        <h1>Informacje</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Po dodaniu sie z nami skontaktuj</h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Nie wiem no wyslij golebia pocztowego do nas</h4>
+                    </th>
+                  </tr>
+            </table>
+            <br/><br/><br/>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

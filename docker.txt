@@ -1,0 +1,25 @@
+
+1. Uruchomienie kontenera MongoDB:
+   W terminalu uruchom ponizsza komende, aby uruchomic kontener z MongoDB w wersji 6.0:
+
+   docker run -d --name baza_kompania -p 27017:27017 mongo:6.0
+
+   - `-d` oznacza uruchomienie kontenera w tle.
+   - `--name baza_kompania` nadaje kontenerowi nazwe "baza_kompania".
+   - `-p 27017:27017` mapuje porty, aby MongoDB bylo dostepne lokalnie na porcie 27017.
+
+2. Po uruchomieniu kontenera MongoDB, mozna sie do niego polaczyc i sprawdzic dane.
+
+3. Aby zalogowac sie do MongoDB, uzyj ponizszej komendy w terminalu:
+
+   docker exec -it baza_kompania mongo
+
+   Ta komenda otworzy powloke MongoDB w Twoim terminalu.
+
+4. **Wyswietlanie uzytkowników:**
+
+   Aby wyswietlic liste uzytkowników w bazie danych `baza_kompania`, uruchom ponizsze komendy w MongoDB shell:
+
+   use baza_kompania;  # Wybierz baze danych
+
+   db.users.find();  # Wyswietl wszystkich uzytkowników

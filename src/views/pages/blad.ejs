@@ -1,0 +1,20 @@
+<%- include('../partials/head') %>
+<p class="komunikat">Strona uruchamiana przez MongoDB</p>
+<%- include('../partials/header') %>
+
+<body>
+    <main>
+        <div class="container">
+            <br/>
+            <div class="sekcja1">
+                <h1><%= title || 'Blad' %></h1>
+                <h3>
+                    <%= message || 'Wystapil blad.' %>
+                </h3>
+            </div>
+            <br/><br/><br/>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>

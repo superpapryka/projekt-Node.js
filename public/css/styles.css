@@ -1,0 +1,226 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.komunikat{
+    color: whitesmoke;
+    font-size: 18px;
+    text-align: center;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    margin-block: auto;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, teal, seagreen);
+}
+
+.container{
+    background-image: url(../img/Tapeta.png), url(../img/Tapeta-sand.png);
+    background-position: center top, center top;
+    background-repeat: no-repeat, repeat-y;
+    background-size: cover, auto;
+    width: 70%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+  }  
+.container h1{
+    margin: 0;
+}
+
+.tytul{
+    margin-right: 20%;
+}
+header {
+    width: 100%; /* Ustawienie szerokości nagłówka na 100% */
+    max-width: 70%; /* Ustawiamy maksymalną szerokość na 70% kontenera */
+    margin: 0 auto; /* Wyrównanie nagłówka do środka */
+}
+header .container {
+    display: flex;
+    background-image: linear-gradient(to bottom, darkorange, whitesmoke, blue);
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  
+header nav ul {
+    display: flex;
+    list-style: none;
+    font-weight: bold;
+}
+header nav ul li {
+    margin-left: 20px;
+}
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+.tytul{
+    padding-left: 20px;
+}
+
+main{
+    margin: -20px 0;
+}
+
+.sekcja1{
+    color: whitesmoke;
+    text-align: center;
+    margin: 0;
+}
+.sekcja1 img{
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+}
+
+.sekcja2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.sekcja2 h2{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.tablica{
+    margin: 0 auto;
+}
+.tablica th{
+    border-style: solid;
+    border-width: 10px;
+    border-image: linear-gradient(to bottom, darkorange, whitesmoke, blue) 1;
+    text-align: center;
+    background-image: linear-gradient(grey, whitesmoke, grey);
+    width: 400px;
+}
+.tablica img{
+    width: 100%;
+    height: auto;
+}
+.tablica h4, .tablica h5{
+    cursor: help;
+}
+
+.bladFormularza{
+    color: red;
+    cursor: not-allowed;
+}
+
+.tablica::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.tablica {
+    box-sizing: border-box;
+    overflow: auto;
+    margin: 0 auto;
+}
+.tablica th {
+    border-style: solid;
+    border-width: 10px;
+    border-image: linear-gradient(to bottom, darkorange, whitesmoke, blue) 1 !important;
+    background-image: linear-gradient(grey, whitesmoke, grey) !important;
+    text-align: center;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+  
+.tablicaLewa{
+    float: left !important;
+    width: 420px !important;
+    margin-left: 18.5% !important;
+}
+.tablicaPrawa{
+    float: right !important;
+    width: 420px !important;
+    margin-right: 18.5% !important;
+    margin-top: -49.45%;
+}
+.tablicaLewa th{
+    border-style: solid;
+    border-width: 10px;
+    border-image: linear-gradient(to bottom, darkorange, whitesmoke, blue) 1 !important;
+    background-image: linear-gradient(grey, whitesmoke, grey) !important;
+    text-align: center;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+.tablicaPrawa th{
+    border-style: solid;
+    border-width: 10px;
+    border-image: linear-gradient(to bottom, darkorange, whitesmoke, blue) 1 !important;
+    background-image: linear-gradient(grey, whitesmoke, grey) !important;
+    text-align: center;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.tablicaLewa2{
+    float:left;
+    margin-left:19.9%;
+}
+.tablicaPrawa2{
+    float:right;
+    margin-right:19.9%;
+}
+.tablicaLewa2 th, .tablicaPrawa2 th{
+    border-style: solid;
+    border-width: 10px;
+    border-image: linear-gradient(to bottom, darkorange, whitesmoke, blue) 1 !important;
+    background-image: linear-gradient(grey, whitesmoke, grey) !important;
+    text-align: center;
+    width: 400px;
+    box-sizing: border-box;
+    padding: 10px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.obraz1:hover{
+    content: url(../img/Superstrada2.png);
+    cursor: help;
+}
+.obraz2:hover{
+    cursor: help;
+}
+
+footer{
+    position: relative;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+footer .container{
+    background-image: linear-gradient(to bottom, darkorange, whitesmoke, blue);
+    height: 50px;
+}
+footer p{
+    margin-top: 0;
+}
+

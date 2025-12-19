@@ -1,0 +1,88 @@
+<%- include('../partials/head', { title: 'Zaloguj sie na stronie' }) %>
+<p class="komunikat">Strona uruchamiana przez MongoDB</p>
+<%- include('../partials/header') %>
+
+<body>
+    <main>
+        <div class="container">
+            <br/>
+            <div class="sekcja1">
+                <h1>Formularz logowania</h1>
+                <h3>Zaloguj sie aby moc zlozyc zlecenie</h3>
+            </div>
+            <table class="tablicaLewa2">
+                <form action="/auth/login" method="POST" id="loginForm">
+                <tr>
+                    <th>
+                        <h1>Logowanie</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Nazwa uzytkownika z serwera
+                            <input type="text" id="loginNazwa" name="nazwa" minlength="5" required
+                            value="<%= (typeof loginFormData !== 'undefined' && loginFormData.nazwa) ? loginFormData.nazwa : '' %>">
+                        </h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Haslo (Najlepiej nieuzywane)<input type="password" id="haslo" name="haslo" minlength="5" required></h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4 style="cursor: wait;">Wesolych swiat :-)<br/><input type="password" id="wypelniacz" id="wypelniacz" name="wypelniacz" style="opacity: 0; cursor: default;"></h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <button type="submit" style="background: none; border: none; cursor: pointer;"><h3>Zaloguj sie</h3></button>
+                        <% if (typeof loginError !== 'undefined' && loginError) { %>
+                            <div class="bladFormularza"><h4><%= loginError %></h4></div>
+                        <% } %>
+                    </th>
+                </tr>
+                </form>
+            </table>
+            <table class="tablicaPrawa2">
+                <form action="/auth/register" method="POST" id="rejestrForm">
+                <tr>
+                    <th>
+                        <h1>Rejestracja</h1>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Nazwa uzytkownika z serwera
+                            <input type="text" id="registerNazwa" name="nazwa" minlength="5" required 
+                            value="<%= (typeof registerFormData !== 'undefined' && registerFormData.nazwa) ? registerFormData.nazwa : '' %>">
+                        </h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Haslo (Najlepiej nieuzywane)<input type="password" id="haslo" name="haslo" minlength="5" required></h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <h4>Powtorz Haslo<br/><input type="password" id="haslo2" name="haslo2" minlength="5" required></h4>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <button type="submit" style="background: none; border: none; cursor: pointer;"><h3>Zarejestruj sie</h3></button>
+                        <% if (typeof registerError !== 'undefined' && registerError) { %>
+                            <div class="bladFormularza"><h4><%= registerError %></h4></div>
+                        <% } %>
+                    </th>
+                </tr>
+                </form>
+            </table>
+            <br/><br/><br/>
+        </div>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
