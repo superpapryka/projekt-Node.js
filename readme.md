@@ -18,4 +18,4 @@ Projekt "Biznesowa Kompania Serwerowa" to aplikacja webowa stworzona w oparciu o
 1. **Klonowanie repozytorium**:
    ```bash
    git clone https://github.com/superpapryka/projekt-Node.js.git
-   cd biznesowa-kompania-serwerowa
+   cd projekt-Node.js
